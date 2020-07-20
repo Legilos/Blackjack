@@ -3,15 +3,15 @@ package springpractice.blackjack;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Collections;
 
 @Slf4j
 @Component
 public class DeckImpl implements Deck {
 
-    Deque<CardImpl> deck
-            = new LinkedList<CardImpl>();
+    ArrayList<CardImpl> deck
+            = new ArrayList<CardImpl>();
 
     public DeckImpl() {
         String temp_suit = "";
@@ -53,11 +53,19 @@ public class DeckImpl implements Deck {
 
     @Override
     public CardImpl getCard() {
-        return deck.getFirst();
+        return deck.get(0);
     }
 
     @Override
     public CardImpl drawCard() {
-        return deck.pop();
+        CardImpl card = deck.get(0);
+        //return deck.get(0);
+        deck.remove(0);
+        return card;
+    }
+
+    @Override
+    public void shuffle() {
+        Collections.shuffle(deck);
     }
 }

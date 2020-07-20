@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Play</title>
+</head>
+<body>
+    <h1>Play!</h1>
+    <h3>Dealer Cards</h3>
+    <p>Card one</p>
+    <p><span th:text="${face1}"></span> of <span th:text="${suit1}"></span></p>
+    <p>Card two</p>
+    <p><span th:text="${face2}"></span> of <span th:text="${suit2}"></span></p>
+    <p>Card three</p>
+    <p><span th:text="${face3}"></span> of <span th:text="${suit3}"></span></p>
+    <p>Card four</p>
+    <p><span th:text="${face4}"></span> of <span th:text="${suit4}"></span></p>
+    <p>Card five</p>
+    <p><span th:text="${face5}"></span> of <span th:text="${suit5}"></span></p>
+    <p th:text="${DealerOver}"></p>
+<!--    <p>Card Value</p>-->
+<!--    <p th:text="${value}"></p>-->
+<!--    <p>Card Suit</p>-->
+<!--    <p th:text="${suit}"></p>-->
+<!--    <p>Card Face</p>-->
+<!--    <p th:text="${face}">face placeholder</p>-->
+</body>
+</html>

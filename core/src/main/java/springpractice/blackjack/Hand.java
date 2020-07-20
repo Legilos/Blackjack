@@ -1,10 +1,9 @@
 package springpractice.blackjack;
 
-public interface Deck {
-
+public interface Hand {
     public CardImpl getCard();
-
     public CardImpl drawCard();
-
-    public void shuffle();
+    boolean mustHit();
+    boolean isOver();
+    void addCard();
 }
